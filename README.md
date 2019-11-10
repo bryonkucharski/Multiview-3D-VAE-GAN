@@ -1,9 +1,9 @@
 # Multiview-3D-VAE-GAN
-Final Project for my graduate course CMPSCI674 - Intelligent Visual Computing at UMass
+Final Project for my graduate course CMPSCI674 - Intelligent Visual Computing at UMass. A popular method in 3D object classification is to use multiple 2D images (views) of the 3D object and pass through independent CNN networks. Recent research in generative 3D deep learning includes generating 3D voxelized objects using the VAE-GAN architecture (3D-VAE-GAN). In this project, I extend the existing 3D-VAE-GAN to include multiple views of 2D images for generating voxel based 3D objects. I found that my method had a lower average reconstruction loss on the test dataset.
 
 The baseline code was taken from https://github.com/rimchang/3DGAN-Pytorch
 
-Multiview extension of the 3D-VAE-GAN architecture introduced in the paper "Learning a Probabilistic Latent Space of Object Shapes via 3D Generative-Adversarial Modeling".
+3D-VAE-GAN architecture is introduced in the paper "Learning a Probabilistic Latent Space of Object Shapes via 3D Generative-Adversarial Modeling".
 
 3D-GAN - a 3D model is generated from a random latent vector <br/>
 3D-VAE-GAN - A simple 2D image is encoded using a VAE and the corresponding 3D models are generated using a GAN.  <br/>
