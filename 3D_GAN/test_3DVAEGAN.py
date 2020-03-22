@@ -26,17 +26,17 @@ def test_3DVAEGAN(args):
     # model define
     E = _E(args)
     G = _G(args)
-
+    D =_D(args)
     G_solver = optim.Adam(G.parameters(), lr=args.g_lr, betas=args.beta)
     E_solver = optim.Adam(E.parameters(), lr=args.g_lr, betas=args.beta)
-
+    D_solver= optim.Adam(D.parameters(), lr=args.g_lr, betas=args.beta)
     if torch.cuda.is_available():
         print("using cuda")
         G.cuda()
         E.cuda()
 
     pickle_path = "." + args.pickle_dir + '3DVAEGAN'
-    read_pickle(pickle_path, G, G_solver, G, G_solver,E,E_solver)
+    read_pickle(pickle_path, G, G_solver,D,D_solver,E,E_solver)
     recon_loss_total = 0
     for i, (image, model_3d) in enumerate(dset_loaders):
 
